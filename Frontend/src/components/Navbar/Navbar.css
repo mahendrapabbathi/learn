@@ -83,7 +83,7 @@
     left:50%;
     translate: -50% -50%;
     z-index: -1;
-    padding:2px;
+    padding:3px;
     border-radius: 50%;
     animation:3s spin linear infinite;
 }
