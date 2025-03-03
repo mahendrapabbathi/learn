@@ -1,0 +1,32 @@
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    width:70%;
+    margin:auto;
+    height: 80vh;
+    /* margin-top: 10%; */
+    text-align: center;
+}
+.heading .heading-text{
+    font-size: max(3vw,20px);
+}
+.heading button{
+    background:linear-gradient(45deg,violet,purple);
+    padding:15px 30px;
+    border:none;
+    outline:none;
+    color:white;
+    font-size: max(1vw,17px);
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.heading button:hover{
+    background: linear-gradient(45deg,purple,violet);
+}
+
