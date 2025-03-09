@@ -1,8 +1,13 @@
+// Footer.js
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-const Footer = ({ isLoggedIn }) => {
+const Footer = ({ login }) => {
+  const location = useLocation(); // Get current route
+
+  const isHomePage = location.pathname === "/";
+
   return (
     <>
       <div id='footer' className='footer'>
@@ -12,7 +17,7 @@ const Footer = ({ isLoggedIn }) => {
             <p className='unlock'>UnlockEdu</p>
           </Link>
 
-          {!isLoggedIn && (
+          {!login && isHomePage && ( // Show only on home page when logged out
             <div className='right'>
               <div className='quick'>
                 <h3>Quick Links</h3>

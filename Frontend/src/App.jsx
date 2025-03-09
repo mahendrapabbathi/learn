@@ -1,4 +1,4 @@
-
+// App.js
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
@@ -6,9 +6,10 @@ import Home from './pages/Home/Home';
 import Login from './components/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
 import BackgroundImage from './components/BackgroundImage/BackgroundImage';
-import Toasting from './components/Toasting/Toasting';
 import Footer from './components/Footer/Footer';
 import './App.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   const [login, setLogin] = useState(false);
@@ -29,10 +30,12 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
+
       <hr />
-      <Footer isLoggedIn={login}/>
+      <Footer login={login} /> {/* Pass login state to Footer */}
       
-      <Toasting theme="dark" position="top-center" />
+      <ToastContainer position="top-center" autoClose={3000} />
+
     </>
   );
 };
