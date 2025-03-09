@@ -1,33 +1,40 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar'
-// import SignUp from './pages/Sign Up/SignUp'
-import Home from './pages/Home/Home'
-import {Routes,Route} from "react-router-dom"
-import { useState } from 'react'
-import Login from './components/Login/Login'
-import "./App.css"
-import Dashboard from './pages/Dashboard/Dashboard'
-// import BackgroundVideo from './components/BackgroundVideo/BackgroundVideo'
+
+import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import Login from './components/Login/Login';
+import Dashboard from './pages/Dashboard/Dashboard';
+import BackgroundImage from './components/BackgroundImage/BackgroundImage';
+import Toasting from './components/Toasting/Toasting';
+import Footer from './components/Footer/Footer';
+import './App.css';
 
 const App = () => {
-
-  const [login,setLogin] = useState(false);
+  const [login, setLogin] = useState(false);
 
   return (
     <>
-    {login?<Login setLogin={setLogin}/>:<></>}
-    <div className="container">
-      <div className='app'>
-        <Navbar setLogin={setLogin}/>
+      {login && <Login setLogin={setLogin} />}
+      
+      <div className="container">
+        <div className="app">
+          <Navbar setLogin={setLogin} />
+        </div>
       </div>
-    </div>
-      {/* <hr /> */}
-          <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/dashboard" element={<Dashboard/>}/>
-          </Routes>
-    </>
-  )
-}
 
-export default App
+      <BackgroundImage />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+      <hr />
+      <Footer isLoggedIn={login}/>
+      
+      <Toasting theme="dark" position="top-center" />
+    </>
+  );
+};
+
+export default App;

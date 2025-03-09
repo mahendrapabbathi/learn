@@ -1,11 +1,17 @@
 import React from 'react'
 import Hero from '../../components/Hero/Hero'
-// import Login from '../../components/Login/Login'
+import Skills from '../../components/Skills/Skills'
+import Testimonials from '../../components/Testimonials/Testimonials'
+import Contact from '../../components/Contact/Contact'
 
 const Home = () => {
   return (
     <div>
       <Hero/>
+      <Skills/>
+      <Testimonials/>
+      <Contact/>
+      
     </div>
   )
 }

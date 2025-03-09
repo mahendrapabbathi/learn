@@ -1,9 +1,20 @@
 
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding:15px 0px;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 1000;
+    background-color: black;
+    width:100%;
+    
+}
+.unlock{
+    color:violet;
 }
 
 .elements{
@@ -13,9 +24,9 @@
     gap:10px;
 }
 
-.elements li {
+.elements a {
     position: relative;
-    list-style: none;
+    text-decoration: none;
     margin: 0 15px;
     font-size: max(1vw,17px);
     cursor: pointer;
@@ -23,7 +34,7 @@
     transition: color 0.3s ease-in-out;
 }
 
-.elements li::after {
+.elements a::after {
     content: "";
     position: absolute;
     left: 50%;
@@ -34,10 +45,10 @@
     transition: all 0.3s ease-in-out;
     transform: translateX(-50%);
 }
-.elements li:hover::after {
+.elements a:hover::after {
     width: 100%;
 }
-.elements li:hover {
+.elements a:hover {
     color: rgb(219, 129, 219);
 }
 .logo{
@@ -45,6 +56,7 @@
     align-items: center;
     justify-content: center;
     gap:10px;
+    text-decoration: none;
 }
 .logo p{
     font-size: max(1vw,25px);

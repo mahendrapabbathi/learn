@@ -1,12 +1,17 @@
 import React from 'react'
 import "./Hero.css"
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+
   return (
-    <div className='heading'>
+    
+    <div id='hero' className='heading'>
       <h1 className='heading-text'>The All-In-One Learning Platform</h1>
       <p>Unlock your coding potential with our interactive programming courses, designed for beginners and experts alike. Learn in-demand skills through hands-on projects, real-world applications, and expert guidance.</p>
-      <button>View All Courses</button>
+      <button onClick={()=>navigate("/dashboard")}>View All Courses</button>
     </div>
   )
 }

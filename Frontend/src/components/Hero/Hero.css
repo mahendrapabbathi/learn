@@ -4,11 +4,12 @@
     justify-content: center;
     align-items: center;
     gap:20px;
-    width:70%;
+    /* margin-top: 3%; */
+    width:80%;
     margin:auto;
     height: 80vh;
-    /* margin-top: 10%; */
     text-align: center;
+   
 }
 .heading .heading-text{
     font-size: max(3vw,20px);

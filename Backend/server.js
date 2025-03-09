@@ -6,11 +6,14 @@ import "dotenv/config"
 
 //app config
 const app = express()
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 //middleware
 app.use(express.json());
-app.use(cors())
+app.use(cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    credentials: true,
+}));
 app.use("/api/user",userRouter)
 
 // db connection
@@ -23,3 +26,4 @@ app.get("/",(req,res)=>{
 app.listen(port,()=>{
     console.log(`port is running on ${port}`)
 })
+
