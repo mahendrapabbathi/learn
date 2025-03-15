@@ -11,3 +11,7 @@ export const assets = {
     logout_icon,
     man
 }
+
+export const sideElements = [
+    "Python Home","Python Intro","Python Get Started","Python Syntax"
+]

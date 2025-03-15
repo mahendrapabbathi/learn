@@ -1,9 +1,8 @@
 .skills{
-    margin: 5% 0%;
-    /* width:80%; */
-    padding:3% 0%;
+    padding:10% 0%;
 }
 .skills ul{
+    margin: 5% 0%;
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -48,7 +47,7 @@
     z-index: -1;
     padding:1px;
     border-radius: 5px;
-    animation:3s spin linear infinite;
+    animation:7s spin linear infinite;
 }
 
 .courses::before{
@@ -65,26 +64,28 @@
     }
 }
 
-@media (max-width:1200px) {
+ @media (max-width:1200px) {
     .skills ul{
-        padding:5% 0%;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap:80px;
     }
-}
 
-@media (max-width:832px) {
-    .skills {
-        padding:10% 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
+@media (max-width:670px) {
+    .skills{
+        margin:5% 0%;
     }
 }
-@media (max-width:560px) {
-    .skills ul{
-        padding:10% 0%;
+@media (max-width:435px) {
+    .skills{
+        margin:5% 0%;
+        padding:15% 0%;
+    }
+}
+@media (max-width:300px) {
+    .skills{
+        margin:15% 0%;
+        padding:15% 0%;
     }
 }

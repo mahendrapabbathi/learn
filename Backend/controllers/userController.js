@@ -1,6 +1,4 @@
 
-// import userM
-
 import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
@@ -11,18 +9,15 @@ const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
-    // Check if all fields are provided
     if (!name || !email || !password) {
       return res.status(400).json({ success: false, message: "All fields are required" });
     }
 
-    // Check if user already exists
     const exists = await userModel.findOne({ email });
     if (exists) {
       return res.status(400).json({ success: false, message: "User already exists" });
     }
 
-    // Validate email and password
     if (!validator.isEmail(email)) {
       return res.status(400).json({ success: false, message: "Invalid email format" });
     }
@@ -32,13 +27,10 @@ const registerUser = async (req, res) => {
     }
     
 
-    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create user
     const newUser = await userModel.create({ name, email, password: hashedPassword });
 
-    // Generate token
     const token = createToken(newUser._id);
     res.status(201).json({
       success: true,

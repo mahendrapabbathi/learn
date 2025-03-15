@@ -1,32 +1,40 @@
 import React from 'react'
 import './Skills.css'
+import {useNavigate} from "react-router-dom"
+
 
 const Skills = () => {
+
+    const navigate = useNavigate();
+
+    const handleClick=()=>{
+        navigate("/dashboard")
+    }
+
   return (
     <div id='skills' className='skills'>
             <ul>
                 <div className="courses">
-                    <li>C</li>
+                    <li onClick={handleClick}>C</li>
                 </div>
                 <div className="courses">
-                    <li>Java</li>
+                    <li onClick={handleClick}>Java</li>
                 </div>
                 <div className="courses">
-                    <li>Python</li>
+                    <li onClick={handleClick}>Python</li>
                 </div>
                 <div className="courses">
-                    <li>Data Structures</li>
+                    <li onClick={handleClick}>Data Structures</li>
                 </div>
                 <div className="courses">
-                    <li>Mysql</li>
+                    <li onClick={handleClick}>Mysql</li>
                 </div>
                 <div className="courses">
-                    <li>Javascript</li>
+                    <li onClick={handleClick}>Javascript</li>
                 </div>
             </ul>
     </div>
   )
 }
-import './Skills.css'
 
 export default Skills

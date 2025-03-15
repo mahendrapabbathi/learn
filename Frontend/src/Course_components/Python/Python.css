@@ -1,0 +1,38 @@
+.python {
+    display: flex;
+    height: 100vh; 
+    margin-top: 2.4%;
+    width:100vw;
+    z-index: -1;
+  }
+  
+  .left {
+    background-color:black;
+    display: flex;
+    flex-direction: column;
+  }
+  .left h1{
+    padding-top: 10px;
+  }
+  .left ul{
+    list-style: none;
+  }
+  .left ul li{
+    padding:10px 40px;
+    margin:2px;
+  }
+  .left ul li:hover{
+    background-color: violet;
+    cursor: pointer;
+  }
+  .rightt {
+    padding: 20px;
+    /* background-color: aqua; */
+    flex:1;
+    background:linear-gradient(180deg,#000000,#4645453d);
+
+  }
+  
+.active{
+    /* background-color: violet; */
+}

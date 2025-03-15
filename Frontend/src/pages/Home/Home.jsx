@@ -4,10 +4,10 @@ import Skills from '../../components/Skills/Skills'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Contact from '../../components/Contact/Contact'
 
-const Home = () => {
+const Home = ({setLogin}) => {
   return (
     <div>
-      <Hero/>
+      <Hero setLogin={setLogin}/>
       <Skills/>
       <Testimonials/>
       <Contact/>

@@ -11,18 +11,20 @@
 }
 
 body{
-  /* background: linear-gradient(blue,aqua); */
   min-height: 100vh;
   color:white;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  margin:0;
 }
 
 .container{
-  padding-top: 80px;
   box-shadow: 0px 0px 10px violet;
   width:100%;
 }
 .app{
+  padding-top: 62px;
   max-width:80%;
   margin:auto;
   position: relative;

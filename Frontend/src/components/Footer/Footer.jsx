@@ -1,4 +1,3 @@
-// Footer.js
 import React from 'react';
 import './Footer.css';
 import { Link, useLocation } from 'react-router-dom';
@@ -7,6 +6,12 @@ const Footer = ({ login }) => {
   const location = useLocation(); // Get current route
 
   const isHomePage = location.pathname === "/";
+  const isDashboardOrCourses = ["/dashboard", "/courses"].includes(location.pathname);
+
+  // Hide footer if logged out and not on home page
+  if (!login && isDashboardOrCourses) {
+    return null; // Don't render anything
+  }
 
   return (
     <>
@@ -17,7 +22,7 @@ const Footer = ({ login }) => {
             <p className='unlock'>UnlockEdu</p>
           </Link>
 
-          {!login && isHomePage && ( // Show only on home page when logged out
+          {!login && isHomePage && (
             <div className='right'>
               <div className='quick'>
                 <h3>Quick Links</h3>
@@ -49,9 +54,11 @@ const Footer = ({ login }) => {
         </div>
       </div>
 
-      <div className="footer-last">
-        <p>Copyright © 2025 Sorting Code Help Technologies Pvt Ltd. All Rights Reserved.</p>
-      </div>
+      {(!login && isHomePage) && ( // Show copyright only on home page when logged out
+        <div className="footer-last">
+          <p>Copyright © 2025 Sorting Code Help Technologies Pvt Ltd. All Rights Reserved.</p>
+        </div>
+      )}
     </>
   );
 };

@@ -1,8 +1,8 @@
 
 
 .footer{
-    /* background-color: gray; */
     padding:60px 0px;
+    text-align: center;
 }
 .footer-child{
     display: flex;
@@ -127,8 +127,16 @@
     padding-bottom: 30px;
     color:gray;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -7%; */
 }
-
+@media (max-width:785px) {
+    .footer-last{
+        margin-top: 3px;
+    }
+}
 @media (max-width:1064px) {
     .footer-child{
         display: flex;
