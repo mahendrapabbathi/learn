@@ -33,6 +33,8 @@
     cursor: pointer;
     padding: 5px 0;
     transition: color 0.3s ease-in-out;
+    color:purple;
+    font-weight:500;
 }
 
 .elements a::after {
@@ -84,9 +86,6 @@
 .logoo::after,.logoo::before{
     content: "";
     position: absolute;
-    /* background-color: blue; */
-    /* background: linear-gradient(red ,purple,violet,pink,orange); */
-    /* background-image: conic-gradient(red,green ,blue,red); */
     background-image: conic-gradient(from var(--angle),violet,purple,violet,purple,violet,purple,violet);
     height: 100%;
     width: 100%;

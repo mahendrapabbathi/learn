@@ -52,10 +52,6 @@ const Contact = () => {
           {loading && <ClipLoader size={20} color="white" />} Send Message
         </button>
       </form>
-
-      {/* <button type="button" onClick={() => toast.success("Test Toast!")}>
-  Test Toast
-</button> */}
     </section>
       <hr />
     </>

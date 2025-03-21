@@ -5,7 +5,7 @@ import { assets } from '../../assets/assets'
 const Testimonials = () => {
   return (
     <div className='testimonials'>
-      <h1>See what others are achieving through learning</h1>
+      <p className='testimonials-header'>See what others are achieving through learning</p>
       <div className="reviews">
         <div className="card">
         <i class="fa-solid fa-quote-left"></i>

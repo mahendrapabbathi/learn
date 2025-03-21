@@ -1,20 +1,23 @@
 import React from 'react'
 import './DNavbar.css'
-import Python from '../Python/Python'
 import { useNavigate } from 'react-router-dom'
+import Python from '../Python/Python';
 const DNavbar = () => {
 
     const navigate = useNavigate();
 
-    const handleClick=()=>{
+    const handleClickPython=()=>{
         navigate("/courses");
         <Python/>
+    }
+    const handleClick=()=>{
+      
     }
 
   return (
     <div className='dNavbar'>
       <ul>
-        <li onClick={handleClick}>Python</li>
+        <li onClick={handleClickPython}>Python</li>
         <li onClick={handleClick}>C</li>
         <li onClick={handleClick}>Java</li>
         <li onClick={handleClick}>HTML</li>

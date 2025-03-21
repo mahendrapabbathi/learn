@@ -32,6 +32,7 @@ const registerUser = async (req, res) => {
     const newUser = await userModel.create({ name, email, password: hashedPassword });
 
     const token = createToken(newUser._id);
+
     res.status(201).json({
       success: true,
       token,
@@ -42,7 +43,6 @@ const registerUser = async (req, res) => {
     res.status(500).json({ success: false, message: "Server error during registration" });
   }
 };
-
 
 // Login User
 const loginUser = async (req, res) => {

@@ -8,7 +8,6 @@ const StoreContextProvider = (props)=>{
     const url = "https://unlockedu-backend-j24v.onrender.com";
     const [token,setToken] = useState("");
 
-    // for do not change the sign out button when we refresh
     useEffect(() => {
       if(localStorage.getItem("token")){
         setToken(localStorage.getItem("token"));

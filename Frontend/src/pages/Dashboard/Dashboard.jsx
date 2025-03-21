@@ -1,10 +1,13 @@
 import React from 'react';
-import "./Dashboard.css";
+import Dhome from '../DHome/Dhome';
+import Language from '../../Course_components/Navbar/Languages/Language';
 
 const Dashboard = () => {
   return (
     <div className='hi'>
-      
+      <Dhome/>
+      <hr />
+      <Language/>
     </div>
   );
 };

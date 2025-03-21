@@ -1,9 +1,10 @@
 .dNavbar{
     width:100%;
-    box-shadow: 0px 0px 5px violet;
     position: fixed;
-    z-index: 1000;
+    border-top :2px solid violet;
+    border-bottom :2px solid violet;
     background-color:black;
+    margin-top: 2px;
 }
 .dNavbar ul{
     display: flex;

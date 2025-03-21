@@ -4,7 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Login from './components/Login/Login';
 import Dashboard from './pages/Dashboard/Dashboard';
-import BackgroundImage from './components/BackgroundImage/BackgroundImage';
+// import BackgroundImage from './components/BackgroundImage/BackgroundImage';
 import Footer from './components/Footer/Footer';
 import './App.css';
 import { ToastContainer } from "react-toastify";
@@ -24,13 +24,13 @@ const App = () => {
       {login && <Login setLogin={setLogin} />}
       
       <div className="container">
+      {/* <BackgroundImage /> */}
         <div className="app">
           <Navbar setLogin={setLogin} isCoursesPage={isCoursesPage}/>
         </div>
         {showDNavbar && <DNavbar />}
       </div>
 
-      <BackgroundImage />
 
       <Routes>
         <Route path="/" element={<Home setLogin={setLogin}/>} />
@@ -38,7 +38,6 @@ const App = () => {
         <Route path="/courses" element={<Courses/>} />
       </Routes>
 
-      <hr />
       <Footer login={login} /> 
       
       <ToastContainer position="top-center" autoClose={3000} />
