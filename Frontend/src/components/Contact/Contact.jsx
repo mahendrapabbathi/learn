@@ -18,7 +18,7 @@ const Contact = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/sendmail",
+        "https://unlock-backend-tfu6.onrender.com/api/user/sendmail",
         formData,
         { withCredentials: true, headers: { "Content-Type": "application/json" } }
       );
