@@ -4,8 +4,6 @@ import logout_icon from './logout_icon.png'
 import man from './man3.png'
 import bg3 from "./bg3.jpeg"
 
-
-
 export const assets = {
     cross_icon,
     profile_icon,

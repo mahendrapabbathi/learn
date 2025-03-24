@@ -1,35 +1,21 @@
-import React from 'react'
-import './DNavbar.css'
-import { useNavigate } from 'react-router-dom'
-import Python from '../Python/Python';
+
+import React from "react";
+import "./DNavbar.css";
+import { useNavigate } from "react-router-dom";
+
 const DNavbar = () => {
-
-    const navigate = useNavigate();
-
-    const handleClickPython=()=>{
-        navigate("/courses");
-        <Python/>
-    }
-    const handleClick=()=>{
-      
-    }
+  const navigate = useNavigate();
 
   return (
-    <div className='dNavbar'>
+    <div className="dNavbar">
       <ul>
-        <li onClick={handleClickPython}>Python</li>
-        <li onClick={handleClick}>C</li>
-        <li onClick={handleClick}>Java</li>
-        <li onClick={handleClick}>HTML</li>
-        <li onClick={handleClick}>CSS</li>
-        <li onClick={handleClick}>Bootstrap</li>
-        <li onClick={handleClick}>Javascript</li>
-        <li onClick={handleClick}>C++</li>
-        <li onClick={handleClick}>React</li>
-        <li onClick={handleClick}>SQL</li>
+        <li onClick={() => navigate("/courses/python")}>Python</li>
+        <li onClick={() => navigate("/courses/java")}>Java</li>
+        <li onClick={() => navigate("/courses/c")}>C</li>
+        <li onClick={() => navigate("/courses/html")}>HTML</li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default DNavbar
+export default DNavbar;

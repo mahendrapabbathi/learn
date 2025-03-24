@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets'
 
 const Testimonials = () => {
   return (
-    <div className='testimonials'>
+    <div id='testimonials' className='testimonials'>
       <p className='testimonials-header'>See what others are achieving through learning</p>
       <div className="reviews">
         <div className="card">

@@ -1,4 +1,3 @@
-
 import React, { useContext, useState } from 'react';
 import "./Navbar.css";
 import { StoreContext } from '../../context/StoreContext';
@@ -6,18 +5,18 @@ import { assets } from '../../assets/assets.js';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { toast } from "react-toastify";
 
-const Navbar = ({ setLogin, isCoursesPage }) => {
+const Navbar = ({ setLogin, isCourseDetailPage }) => {
   const [menu, setMenu] = useState('home');
   const { token, setToken } = useContext(StoreContext);
   const navigate = useNavigate();
   const location = useLocation();
 
-const logout = () => {
-  localStorage.removeItem("token");
-  setToken("");
-  navigate("/");
-  toast.success("Logged out successfully!");
-};
+  const logout = () => {
+    localStorage.removeItem("token");
+    setToken("");
+    navigate("/");
+    toast.success("Logged out successfully!");
+  };
 
   const handleScroll = (id) => {
     if (id === "home") {
@@ -30,25 +29,35 @@ const logout = () => {
     }
   };
 
+  // Define page conditions
+  const isHomePage = location.pathname === "/";
   const isDashboard = location.pathname === "/dashboard";
+  const isCoursesPage = location.pathname === "/courses";
 
   return (
     <div className='navbar'>
-      <Link to="/" onClick={() => handleScroll("home")} className="logo">
+      <Link to="/" className="logo">
         <p className='logoo'>U</p>
         <p className='unlock'>UnlockEdu</p>
       </Link>
 
-      <div className="nav-right">
-        {!isDashboard && !isCoursesPage && (
+      {!isDashboard && !isCoursesPage && !isCourseDetailPage && (
+        <div className="nav-right">
           <ul className="elements">
-            <Link to="/" onClick={() => handleScroll("home")} className={menu === "home" ? "active" : ""}>Home</Link>
-            <a href='#skills' onClick={() => handleScroll("skills")} className={menu === "skills" ? "active" : ""}>Courses</a>
-            <a href='#contact' onClick={() => handleScroll("contact")} className={menu === "contact" ? "active" : ""}>Contact</a>
-            <a href='#footer' onClick={() => handleScroll("footer")} className={menu === "footer" ? "active" : ""}>Footer</a>
+            {isHomePage && (
+              <>
+                <Link to="/" onClick={() => handleScroll("home")} className={menu === "home" ? "active" : ""}>Home</Link>
+                <a href='#testimonials' onClick={() => handleScroll("testimonials")} className={menu === "skills" ? "active" : ""}>Testimonials</a>
+                <a href='#contact' onClick={() => handleScroll("contact")} className={menu === "contact" ? "active" : ""}>Contact</a>
+                <a href='#footer' onClick={() => handleScroll("footer")} className={menu === "footer" ? "active" : ""}>Footer</a>
+              </>
+            )}
           </ul>
-        )}
+        </div>
+      )}
 
+      {/* ✅ Profile Section (Visible Everywhere) */}
+      <div className="nav-right">
         {!token ? (
           <button
             onClick={(e) => {

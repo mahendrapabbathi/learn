@@ -1,13 +1,13 @@
 // import React, { useState } from "react";
 // import accordionData from "../../Programming_Languages/programming_languages.js";
-// import "./Python.css";
+// import "./Java.css";
 
-// const Python = () => {
+// const Java = () => {
 //   const [openIndex, setOpenIndex] = useState(null);
 //   const [openSubIndex, setOpenSubIndex] = useState({});
 
 //   // Filter only Python-related sections correctly
-//   const pythonData = accordionData.filter((item) => item.language === "python");
+//   const pythonData = accordionData.filter((item) => item.language === "java");
 
 //   const handleToggle = (index) => {
 //     setOpenIndex(openIndex === index ? null : index);
@@ -60,4 +60,4 @@
 //   );
 // };
 
-// export default Python;
+// export default Java;

@@ -1,4 +1,4 @@
-/* .language-container {
+.language-container {
     max-width:100%;
     margin: 30px auto;
     padding-top: 15px;
@@ -83,4 +83,4 @@
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
   }
-   */
+  

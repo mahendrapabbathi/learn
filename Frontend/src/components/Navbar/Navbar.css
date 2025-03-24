@@ -113,15 +113,7 @@
 }
 
 .navbar p{
-    /* font-size: max(2vw,18px); */
     font-weight: 600;
-}
-
-.nav-right{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:50px;
 }
 .navbar button{
     padding:10px 30px;

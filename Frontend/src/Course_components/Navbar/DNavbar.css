@@ -5,13 +5,21 @@
     border-bottom :2px solid violet;
     background-color:black;
     margin-top: 2px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
 }
 .dNavbar ul{
+    /* width:100%; */
     display: flex;
     list-style: none;
     justify-content: space-between;
+    gap:70px;
     align-items: center;
     padding:5px 10px;
+}
+.dNavbar::-webkit-scrollbar {
+    display: none;
 }
 .dNavbar ul li{
     cursor: pointer;
