@@ -1,5 +1,5 @@
 import React from 'react'
-import Dhero from '../../Course_components/Navbar/DHero/Dhero'
+import Dhero from '../../Course_components/DHero/Dhero'
 
 const Dhome = () => {
   return (

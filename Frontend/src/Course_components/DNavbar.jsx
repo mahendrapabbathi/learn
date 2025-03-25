@@ -13,6 +13,9 @@ const DNavbar = () => {
         <li onClick={() => navigate("/courses/java")}>Java</li>
         <li onClick={() => navigate("/courses/c")}>C</li>
         <li onClick={() => navigate("/courses/html")}>HTML</li>
+        <li onClick={() => navigate("/courses/css")}>CSS</li>
+        <li onClick={() => navigate("/courses/javascript")}>JavaScript</li>
+
       </ul>
     </div>
   );

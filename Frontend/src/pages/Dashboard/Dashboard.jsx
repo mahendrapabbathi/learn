@@ -1,6 +1,6 @@
 import React from 'react';
 import Dhome from '../DHome/Dhome';
-import Language from '../../Course_components/Navbar/Languages/Language';
+import Language from '../../Course_components/Languages/Language';
 
 const Dashboard = () => {
   return (

@@ -36,10 +36,11 @@ const Navbar = ({ setLogin, isCourseDetailPage }) => {
 
   return (
     <div className='navbar'>
-      <Link to="/" className="logo">
-        <p className='logoo'>U</p>
-        <p className='unlock'>UnlockEdu</p>
+      <Link to="/" className="logo" onClick={() => navigate("/")}>
+          <p className='logoo'>U</p>
+          <p className='unlock'>UnlockEdu</p>
       </Link>
+
 
       {!isDashboard && !isCoursesPage && !isCourseDetailPage && (
         <div className="nav-right">

@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import accordionData from "../../../Programming_Languages/programming_languages.js";
+import accordionData from "../../Programming_Languages/programming_languages.js"
 import "./CoursePage.css";
 
-const CoursePage = ({setLogin}) => {
-  const { language } = useParams();  // Get language name from URL
+const CoursePage = () => {
+  const { language } = useParams(); 
   const [openIndex, setOpenIndex] = useState(null);
   const [openSubIndex, setOpenSubIndex] = useState({});
 
-  // Filter based on the route parameter
   const filteredData = accordionData.filter((item) => item.language === language);
 
   const handleToggle = (index) => {

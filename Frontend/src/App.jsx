@@ -9,8 +9,8 @@ import './App.css';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import Courses from './pages/Courses/Courses';
-import DNavbar from './Course_components/Navbar/DNavbar';
-import CoursePage from './Course_components/Navbar/CoursePage/CoursePage';
+import DNavbar from './Course_components/DNavbar';
+import CoursePage from './Course_components/CoursePage/CoursePage';
 
 const App = () => {
   const [login, setLogin] = useState(false);
