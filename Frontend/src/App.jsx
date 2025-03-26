@@ -8,7 +8,6 @@ import Footer from './components/Footer/Footer';
 import './App.css';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import Courses from './pages/Courses/Courses';
 import DNavbar from './Course_components/DNavbar';
 import CoursePage from './Course_components/CoursePage/CoursePage';
 
